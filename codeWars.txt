@@ -1,0 +1,42 @@
+function getCount(str) {
+  var vowelsCount = 0;
+  
+  vowelsCount =str.match(/[aeiou]/gi);
+  
+  return vowelsCount=== null ? 0:vowelsCount.length;
+}
+//////////////////////////////
+function even_or_odd(number) {
+  return (number % 2 ==0)? "Even" : "Odd";
+}
+
+////////////////////////////////
+function getMiddle(s)
+{ return (s.length % 2 == 0)? 
+s.substring((s.length/2)-1, (s.length/2)+1):s.substring(s.length/2, (s.length/2)+1);
+  
+}
+////////////////////////::
+function opposite(number) {
+  //your code here
+  return (number<0)? Math.abs(number): -number
+}
+////////////////////////
+function accum(s) {
+	// your code
+    var result=""
+  for(var i=0;i<s.length;i++){
+    var up=s.slice(i,i+1).toUpperCase()
+    result= result.concat(up,s.slice(i,i+1).repeat(i).toLowerCase())
+    result +="-"
+  }
+  
+  return result.slice(0,result.length-1)
+  
+}
+///////////////////////
+var isSquare = function(n){
+  
+  return Number.isInteger(Math.sqrt(n))?true:false; // fix me
+}
+/////////////////////
